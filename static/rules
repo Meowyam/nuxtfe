@@ -1,0 +1,7 @@
+export default [
+  {
+    id: [1,2],
+    players: ["Player 1", "Player 2"],
+    moves: ["rock", "paper", "scissors"]
+  }
+]
