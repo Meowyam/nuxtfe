@@ -1,17 +1,22 @@
 <template>
     <body>
-        <div v-for="option in options" :key="option.id">
-            <form>
+        <form>
+            <div v-for="(value, name, index) in options">
                 <v-select
+                :options="value"
+                @input="name => updatePlayer(game,name,index)">
+                </v-select>
+                <!-- <v-select
                 :options="option.players"
-                @input="(player) => updateGame(game, player)">
+                @input="(player) => updatePlayer(game, player)">
                 </v-select>
                 <v-select
                 :options="option.moves"
-                @input="(move) => updateGame(game, move)">
-                </v-select>
-            </form>
-        </div>
+                @input="(move) => updateMove(game, move)">
+                </v-select> -->
+            </div>
+
+        </form>
         meow
         <div>
             {{game}}
@@ -28,13 +33,18 @@
     export default {
         data() {
             return {
-              options,
-              game: {player: '', move: ''}
+            options,
+            game: {players: '', move: ''}
             }
         },
         methods: {
-            updateGame(game, player) {
-                game.player = player
+            updatePlayer(x,y,i) {
+                console.log(i)
+                let b = (Object.keys(x)[i])
+                this.game[b] = y
+            },
+            updateMove(game, x) {
+                game.move = x
             }
         },
     }

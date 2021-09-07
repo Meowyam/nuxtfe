@@ -1,7 +1,4 @@
-export default [
-  {
-    id: [1,2],
+export default {
     players: ["Player 1", "Player 2"],
     moves: ["rock", "paper", "scissors"]
-  }
-]
+}
