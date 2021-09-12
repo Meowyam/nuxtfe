@@ -22,38 +22,32 @@ export default{
         things : Array,
         mySet  : Set,
         arr    : Array,
-        n      : Number
+        n      : Number,
     },
     methods: {
         updatePlayer(x, i, n) {
-            console.log(this.things)
-            console.log(x)
-            console.log(i)
-            this.addSelect = false
+            console.log('start',x,i,n)
             let a = this.things[i]
             let b = ("entry" + i)
-            b = new Object()
+            b = {}
             b[a] = x
             let c = b[a]
-            console.log(b)
-            console.log(a, b, c)
-            console.log(this.arr)
             this.arr.push(c)
-            console.log(c)
-            console.log(n)
-            //this.checkIfEnd(x,c,i,n)
+            this.checkIfEnd(x,c,i,n)
         },
         checkIfEnd(x,c,i,n) {
-            console.log(c)
+            console.log(i+1, Object.keys(this.options).length)
+
             if ((i+1) == Object.keys(this.options).length) {
                 this.mySet.add(this.arr)
-                console.log(this.arr)
-                console.log(this.mySet)
+                console.log('end check',x,c,i,n)
+                console.log('in component')
             } else {
+                console.log('end',x,c,i,n)
                 // this.updatePlayer(x,c,i)
             }
         }
-    },
+    }
 }
 </script>
 

@@ -1,15 +1,17 @@
 <template>
     <body>
         <form>
+             <transition-group name="fade">
              <Selector
                 v-for="(item, index) in items"
                 :key="index"
                 :options="options"
                 :things="things"
                 :mySet="mySet"
-                :arr="item.arr"
+                :arr="arr"
                 :n="item.n"
             />
+            </transition-group>
         </form>
         meow  <button @click="addFormItem()">Add Selector</button>
         <div>
@@ -28,7 +30,7 @@
         data() {
             return {
               options,
-              items: [{ arr: [], n: 1 }],
+              items: [{ n: 1 }],
               mySet: new Set(),
               things: [],
               arr: [],
@@ -48,6 +50,7 @@
             this.things = Object.keys(options)
             this.mySet = new Set()
             console.log((Object.values(this.options)[0]).length)
+
         }
     }
 </script>
