@@ -25,6 +25,7 @@
     "babel-jest": "^27.0.5",
     "jest": "^27.0.5",
     "postcss": "^8.3.5",
+    "prettier": "2.4.0",
     "ts-jest": "^27.0.3",
     "vue-jest": "^3.0.4"
   }

@@ -1,18 +1,11 @@
 <template>
-    <div>
-        <div v-for="(value, name, index) in options" :key="index">
-            <v-select
-            :options="value"
-            @input="name => updatePlayer(name, index, n)">
-            </v-select>
-            <!-- <v-select
-            :options="value"
-            @input="name => updatePlayer(name,index,n)">
-            </v-select> -->
-        </div>
+  <div>
+    <div v-for="(value, name, index) in options" :key="index">
+      <v-select :options="value" @input="name => updatePlayer(name, index, n)">
+      </v-select>
     </div>
+  </div>
 </template>
-<!--(value, name, index)-->
 
 <script>
 export default{
@@ -41,4 +34,3 @@ export default{
     }
 }
 </script>
-
