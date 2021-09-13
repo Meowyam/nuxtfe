@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div v-for="(value, name, index) in options" :key="index">
+      Do you:
+    <div v-for="(value, name, index) in options">
       <v-select :options="value" @input="name => updatePlayer(name, index, n)">
       </v-select>
     </div>
@@ -25,6 +26,7 @@ export default{
             } else {
                 let a = this.things[i]
                 let b = ("entry" + i)
+                console.log(x,i,n)
                 b = {}
                 b[a] = x
                 let c = b[a]

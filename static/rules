@@ -1,4 +1,4 @@
 export default {
-    players: ["Player 1", "Player 2"],
-    moves: ["rock", "paper", "scissors"]
+    a1: ["walk", "run", "neither"],
+    a2: ["eat", "drink", "neither"]
 }

@@ -48,6 +48,7 @@ export default {
     },
     mounted() {
         this.things = Object.keys(options)
+        console.log(this.things)
         this.mySet = new Set()
     }
 }
