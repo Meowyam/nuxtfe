@@ -10,10 +10,10 @@
                 :mySet="mySet"
                 :arr="arr"
                 :n="item.n"
+                @addSelect="addFormItem()"
             />
             </transition-group>
         </form>
-        meow  <button @click="addFormItem()">Add Selector</button>
         <div>
             {{arr}}
         </div>
@@ -49,8 +49,6 @@
         mounted() {
             this.things = Object.keys(options)
             this.mySet = new Set()
-            console.log((Object.values(this.options)[0]).length)
-
         }
     }
 </script>
